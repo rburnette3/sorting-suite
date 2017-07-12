@@ -1,8 +1,5 @@
 let array = [8, 5, 9, 1, 6, 8, 2];
 
-
-
-
   const quickSort = array => {
   if(array.length <= 1) return array;
 

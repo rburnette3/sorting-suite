@@ -1,7 +1,7 @@
-const numbers = [9,2,5,1,7]
+const numbers = [9, 2, 5, 1, 7]
 
 const mergeSort = array => {
-  let middleNum = Math.floor(array.length/2);
+  let middleNum = Math.floor(array.length / 2);
   let leftSide = array.slice(0, middleNum);
   let rightSide = array.slice(middleNum);
 
@@ -20,12 +20,10 @@ const merge = (leftSide, rightSide) => {
       newArray.push(rightSide.shift());
     }
   }
-
   newArray.push(...leftSide, ...rightSide);
 
   return newArray;
 }
-
 mergeSort(numbers)
 
 module.exports = mergeSort
