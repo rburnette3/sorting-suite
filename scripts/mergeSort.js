@@ -1,33 +1,31 @@
-const array = [3,5,1,9,2,11];
+const numbers = [9,2,5,1,7]
 
-const mergeSort = (array) => {
-  if(array.length < 2) {
-  // console.log(array);
-  return array;
-  } else {
-    let mid = Math.floor(array.length/2);
-    let left = array.slice(0, mid);
-    let right = array.slice(mid);
-  console.log(left);
-  console.log(right);
+const mergeSort = array => {
+  let middleNum = Math.floor(array.length/2);
+  let leftSide = array.slice(0, middleNum);
+  let rightSide = array.slice(middleNum);
 
-  mergeSort(left);
-  mergeSort(right);
-
-  }
-
-  const merge = (left, right) => {
-    if(left[0]>right[0]){
-      left[0]=right[0];
-
-      console.log(left[0])
-    }
-
-
-  }
-  return
+  if (array.length < 2) {
+    return array;
+  }  return merge(mergeSort(leftSide), mergeSort(rightSide))
 }
 
-mergeSort(array)
+const merge = (leftSide, rightSide) => {
+  let newArray = [];
+
+  while (leftSide.length && rightSide.length) {
+    if (leftSide[0] < rightSide[0]) {
+      newArray.push(leftSide.shift());
+    } else {
+      newArray.push(rightSide.shift());
+    }
+  }
+
+  newArray.push(...leftSide, ...rightSide);
+
+  return newArray;
+}
+
+mergeSort(numbers)
 
 module.exports = mergeSort
