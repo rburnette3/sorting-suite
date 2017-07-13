@@ -1,5 +1,5 @@
-let array = [8,4,9,5,6,7];
-let count = 0;
+let array = [8, 4, 9, 5, 6, 7];
+
 
 const insertionSort = (array) => {
 
@@ -8,9 +8,6 @@ const insertionSort = (array) => {
       if (array[j] > array[j + 1]) {
         [ array[j], array[j + 1] ] = [ array[j + 1], array[j] ];
       }
-      count++
-      console.log('this: ', count)
-      console.log(array)
     }
   }
 

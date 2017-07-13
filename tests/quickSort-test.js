@@ -28,8 +28,8 @@ describe('quickSort', () => {
   it('should sort arrays of large numbers', () => {
     const array = [];
 
-    for (let i = 0; i < 50; i++) {
-      let randomNumber = Math.ceil(Math.random() * 5);
+    for (let i = 0; i < 249720; i++) {
+      let randomNumber = Math.ceil(Math.random() * 500);
 
       array.push(randomNumber)
     }

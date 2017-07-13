@@ -1,6 +1,5 @@
 const bubbleSort = (array) => {
 
-
   array.forEach((val, i, array) => {
 
     for (let j = 0; j < array.length; j++) {
@@ -10,13 +9,8 @@ const bubbleSort = (array) => {
       }
     }
   });
-// count ++
-// console.log('count: ', count)
 
   return array
-
 }
-
-// bubble(nums)
 
 module.exports = bubbleSort;
